@@ -15,9 +15,7 @@ int main()
         cin >> col;
         sizes[i] = col;
 
-       
         arr[i] = new int[col];
-        
     }
 
     for (int j = 0; j < row; j++)
