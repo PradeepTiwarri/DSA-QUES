@@ -11,14 +11,13 @@ int main()
     int sizes[5];
     for (int i = 0; i < row; i++)
     {
-        cout << "enter the number of clumn in " << i + 1 << endl;
+        cout << "enter the number of clumn in row " << i + 1 << endl;
         cin >> col;
         sizes[i] = col;
 
-        for (int j = 0; j < sizes[i]; j++)
-        {
-            arr[i] = new int[col];
-        }
+       
+        arr[i] = new int[col];
+        
     }
 
     for (int j = 0; j < row; j++)
