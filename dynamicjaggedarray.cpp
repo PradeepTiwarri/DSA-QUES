@@ -9,7 +9,7 @@ int main()
     int col;
     int **arr = new int *[row];
     int sizes[5];
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < row; i++) 
     {
         cout << "enter the number of clumn in row " << i + 1 << endl;
         cin >> col;
