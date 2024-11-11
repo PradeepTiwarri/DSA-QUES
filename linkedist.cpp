@@ -10,6 +10,17 @@ using namespace std ;
         this ->data =d;
         this ->next = NULL;
     }
+    ~Node(){
+      //  int c = this ->data;
+        while(this->next != NULL){
+            delete next;
+            this -> next=NULL ;
+        }
+
+        }
+
+
+    
  };
     void print(Node * &head){
         Node * temp= head;
@@ -51,6 +62,31 @@ using namespace std ;
 
     }
 
+    //DELETE NODE 
+    void deletenode(Node * &head ,Node*&tail,int positon){
+       if(positon == 1){
+        Node* temp = head;
+        head = temp ->next;
+        temp->next = NULL;
+        delete temp ;
+        return;
+       }
+       else { 
+        Node* currpos = head;
+        Node * prev = NULL;
+        int cnt = 1;
+        while (cnt<positon){
+            prev =currpos;
+            currpos= currpos ->next;
+            cnt ++;
+        }
+
+        prev ->next = currpos -> next;
+        currpos->next = NULL ;
+     
+        delete currpos;}
+    }
+
  
  int main(){
     Node * node1 = new Node(10);
@@ -59,14 +95,20 @@ using namespace std ;
     Node* head = node1;
     
     Node * tail = node1;
+    
+
    insertathead(head,12);
     
     insertattail(tail,16);
     insertatposition(head,tail,1,20);
     print(head);
-   
+    cout << endl;
+   deletenode(head,tail,4);
+    print(head);
+ 
 
 
+    
     return 0;
 
  }
