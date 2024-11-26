@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     int row;
+    cout <<"Enter The Number of Rows"<<endl;
     cin >> row;
     int col;
     int **arr = new int *[row];
